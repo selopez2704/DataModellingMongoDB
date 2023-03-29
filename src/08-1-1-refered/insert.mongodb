@@ -1,0 +1,16 @@
+use("platzi_store")
+db.stores.insertOne({
+    storeId:'ST001',
+    name:'SlomStore',
+    address:'calle 1'
+
+})
+db.stores_details.insertOne({
+    storeId:'ST001',
+    description:'text text text',
+    manager:{
+        name:'Slom',
+        manager:1234567
+    }
+
+})

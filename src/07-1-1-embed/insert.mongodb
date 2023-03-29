@@ -1,0 +1,21 @@
+use("platzi_store")
+db.users.insertOne({
+    name:'Felipe',
+    last_name:'Lopez',
+    email:'email2@email.com',
+    password:'Password2*',
+    role:'admin',
+    age:16,
+    isSingle:false,
+    social_account:["Tiktok","Youtube"],
+    address:{
+        street:'carrera 112',
+        city:'Medellin',
+        zip:'001111'
+    },
+    shipping_address:{
+        street:'calle 122',
+        city:'Medellin',
+        zip:'001111'
+    }
+})

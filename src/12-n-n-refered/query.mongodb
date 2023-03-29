@@ -1,0 +1,29 @@
+use("platzi_store")
+db.products.find()
+
+use("platzi_store")
+db.stores.aggregate([
+    {
+        $lookup: {
+            from: 'products',
+            localField: 'products_ids',
+            foreignField: '_id',
+            as: 'products'
+        }
+    }
+   
+])
+
+use("platzi_store")
+db.products.aggregate([
+    {
+        $lookup: {
+            from: 'stores',
+            localField: 'stores_ids',
+            foreignField: '_id',
+            as: 'stores'
+        }
+    }
+   
+])
+

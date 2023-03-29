@@ -1,0 +1,3 @@
+use("platzi_store")
+db.products.find()
+db.orders.findOne({_id:ObjectId('6423b71d76da6759dd0fb236')})
